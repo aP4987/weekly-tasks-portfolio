@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Inputs entered in password and confirm password text fields are same or not.</title>
+<script>
+function checkNaN() {
+    var value = document.getElementById('inputBox').value;
+    if (isNaN(value)) {
+        alert('The entered value is NaN.');
+    } else {
+        alert('The entered value is a number.');
+    }
+}
+
+function checkPasswords() {
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+    if (password === confirmPassword) {
+        alert('Passwords match.');
+    } else {
+        alert('Passwords do not match.');
+    }}
+</script>
+</head>
+<body>
+
+<!-- for NaN -->
+<h3>NaN or not</h3>
+<input type="text" id="inputBox" placeholder="Enter a value">
+<button onclick="checkNaN()">Check NaN</button>
+
+<!--  for matching passwords -->
+<h3>Passwords same or not</h3>
+<label for="password">Password:</label>
+<input type="password" id="password">
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword">
+<button onclick="checkPasswords()">Check Passwords</button>
+
+</body>
+</html>

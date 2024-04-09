@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Show date and time </title>
+</head>
+<body>
+    <script>
+   // Get current date and time
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();   // Format date components
+        var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Adding 1 as months are 0-based
+        var day = ('0' + currentDate.getDate()).slice(-2);
+        var hours = ('0' + currentDate.getHours()).slice(-2);
+        var minutes = ('0' + currentDate.getMinutes()).slice(-2);
+        var seconds = ('0' + currentDate.getSeconds()).slice(-2);
+
+var formattedDateTime = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;   // Date and time string
+document.write(formattedDateTime);  //Display date and time string
+
+    </script>
+</body>
+</html>
